@@ -1,155 +1,103 @@
-// LOOPs
-// let arr = ["Aryan","Javed","Akmal",123,678,true]
-// for(let i = 0; i < arr.length; i++){
-// 2 X 1 = 2
+// function submit() {
+//     let name = document.getElementById("name");
+//     let email = document.getElementById("email");
+//     let heading = document.getElementById("heading");
+
+
+//     heading.innerHTML = `Your Name is ${name.value} and Email is ${email.value}`;
+
+
+//     name.value = ""
+//     email.value = ""
+
+
+
 // }
 
-// let userTable = +prompt("Enter your Table Value");
-// let userStartrTable = +prompt("Enter your Table Value");
-// let userEndTable = +prompt("Enter your Table Value");
 
-// for (let i = userStartrTable; i <= userEndTable; i++) {
-//   document.write(userTable + "X" + i + "=" + userTable * i + "<br>");
+
+// Objects
+// Object is a collection of properties
+
+// let obj = {
+//     "name" : "Aryan",
+//     "age" : 24,
+//     "email":"arayn@gmail.com",
+//     color : ["red","black","white"]
+
 // }
 
-// let arr = ["Aryan", "Javed", ["nested", "Array"], "Akmal", 123, 678, true];
+// console.log(obj.color[1]);
+// console.log(obj["name"]);
 
-// for (let i = 0; i < arr.length; i++) {
-//   console.log(arr[i]);
-//   for (let j = 0; j < arr[i].length; j++) {
-//     console.log(arr[i][j]);
-//   }
-// }
 
-// let sum = 0;
-// for(let i = 0; i <=5; i++){
-//     sum += i;
-//     // sum = sum + i;
-//     // 0 , 1 , 3, 6,10 ,15
-// }
-// console.log(sum);
 
-// let i = 0;
-// while(i<10){
-//     console.log(i);
-//     i++;
-// }
-
-// let i = 1;
-// do{
-//     console.log("Hello World");
-//     i++;
-// }
-
-// while(i >= 5)
-
-// for of
-// let str = "Aryan";
-// let arr = ["Aryan","Javed","Akmal",123,678,true]
-
-// for(let i of arr){
-//     console.log(i);
-// }
-
-//
-
-// for (let i = 0; i <= 100; i++) {
-//     if(i % 2 != 0){
-//         console.log(i);
+// let cars ={
+//     honda:{
+//         civic:{
+//             reborn:{
+//                 name:"Civic Honda Reborn",
+//                 price:"$788990",
+//                 year:2024,
+//                 colors : ["black","white","gray"]
+//             }
+//         }
 //     }
 // }
-// *
-// **
-// ***
-// ****
-// *****
 
-// for (let i = 1; i <= 10; i++) {
-//   let star = "";
-//   for (let j = 1; j <= i; j++) {
-//     star = star + "*";
-//   }
-//   console.log(star);
+// cars.honda.civic.reborn.price = "$11111"
+// delete cars.honda.civic.reborn.price
+// for(let company in cars){
+// // console.log(company);
+// for(let modal in cars[company]){
+//     // console.log(modal);
+//     for(let varient in cars[company][modal]){
+//         console.log(cars[company][modal][varient]);
+//     }
+// }
 // }
 
-
-// Template Literals
-// A way to have embedded expressions in string
-
-// let a  = "Aryan";
-// let b = "Akmal";
-// // let c = "Welcome " + a + b + "Thank yOU"
-// let c = `Welcome My User ${a} \n a \t nd ${b} thanks`
-// console.log(c);
+// let user = "honda";
+// let modal = "civic"
+// let varient = "reborn"
+// console.log(cars[user][modal][varient].colors[2]);
+// // console.log(cars.honda.civic.reborn.name);
 
 
 
-// string Methods
-// let a = "aryan";
 
-// console.log(a.toUpperCase());
-// console.log(a.toLowerCase());
-// console.log(a.trim());
-// console.log(a.charAt(4));
+// ===================Local Storage
+// let user = prompt("enter name")
+// localStorage.setItem("UserName",user)
+// localStorage.clear()
 
 
-// Maths Method in js
+// function Signup() {
+//     let email = document.getElementById("email").value;
+//     let password = document.getElementById("password").value;
 
-// let per = 72.9457658568;
+//     localStorage.setItem("Email", email)
+//     localStorage.setItem("Password", password)
 
-// console.log(Math.round(per));
-// console.log(Math.ceil(per));
-// console.log(Math.floor(per));
-// console.log(per.toFixed(2));
-// console.log(Math.random() * 10);
-
-
-
-// let user1 = prompt("Enter Your Name 1st Player")
-// let user2 = prompt("Enter Your Name 2nd Player")
-
-// let toss = Math.random() * 2;
-
-// let change = Math.floor(toss)
-
-// if(change == 0){
-//     console.log(`${user1} you have won the Toss ${change}`);
-// }else{
-//     console.log(`${user2} you have won the Toss ${change}`);
+//     location.href = "./SingIn.html"
 // }
 
-// Password generator
+// function SignIn() {
+//     let email = document.getElementById("email").value;
+//     let password = document.getElementById("password").value;
 
 
-// let randomValues = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/|";
-// let password = "";
+//     if (localStorage.getItem("Email") == email && localStorage.getItem("Password") == password) {
+//         alert("Welcome user")
+//         location.href = "./welcome.html"
+//     } else {
+//         alert("Invalid")
+//     }
 
-// for(let i = 1; i<=5;i++){
-//     let randomNumber = Math.floor(Math.random() * randomValues.length)
-//     // console.log(randomNumber);
-//     password += randomValues[randomNumber]
+
 // }
 
-// console.log(password);
-
-
-// Date 
-// let d = new Date()
-// console.log(d.toString());
-// console.log(d.toDateString());
-// console.log(d.toLocaleString());
-// console.log(d.getTime());
-
-
-// let firstRAMADAN = new Date("2 march 2025")
-// let today = new Date()
-
-// let diff = firstRAMADAN.getTime() - today.getTime()
-// // console.log(diff);
-// // let days= 1000 * 60 * 60 * 24 * 30 * 365
-// let days = diff / (1000 *60 *60 *24)
-// console.log(Math.round(days));
-
-
-// let months = diff / (1000 *60 *60 *24 * 30)
-// console.log(Math.round(months));
+// function logout(){
+//     localStorage.clear()
+//     location.href = "index.html"
+// }
